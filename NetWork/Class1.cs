@@ -18,12 +18,7 @@ namespace NetWork
         {
             return new BandOptions
             {
-                HasVariableHeight = false,
-                IsSunken = false,
-                ShowTitle = true,
-                Title = "NetWork",
-                UseBackgroundColour = false,
-                AlwaysShowGripper = true
+                HasVariableHeight = true
             };
         }
     }

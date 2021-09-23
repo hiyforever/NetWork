@@ -40,15 +40,16 @@ namespace NetWork
             this.label2 = new Label();
             this.timer1 = new Timer(this.components);
             this.SuspendLayout();
-            this.label1.Location = new Point(0, 25);
+            int taskBarHeight = Screen.PrimaryScreen.Bounds.Height - Screen.PrimaryScreen.WorkingArea.Height;
+            this.label1.Location = new Point(0, taskBarHeight / 2);
             this.label1.Name = "label1";
-            this.label1.Size = new Size(75, 25);
+            this.label1.Size = new Size(75, taskBarHeight / 2);
             this.label1.TabIndex = 0;
             this.label1.Text = "0k/s";
             this.label1.TextAlign = ContentAlignment.MiddleRight;
             this.label2.Location = new Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new Size(75, 25);
+            this.label2.Size = new Size(75, taskBarHeight / 2);
             this.label2.TabIndex = 1;
             this.label2.Text = "0k/s";
             this.label2.TextAlign = ContentAlignment.MiddleRight;
@@ -62,7 +63,7 @@ namespace NetWork
             this.Controls.Add((Control)this.label1);
             this.Font = new Font("宋体", 9f, FontStyle.Bold, GraphicsUnit.Point, (byte)134);
             this.Name = "UserControl1";
-            this.Size = new Size(78, 50);
+            this.Size = new Size(75, taskBarHeight);
             this.ResumeLayout(false);
         }
 

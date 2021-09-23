@@ -24,8 +24,8 @@ namespace NetWork
             };
             this.devices = new Dictionary<string, PerformanceCounter>[2]
             {
-        new Dictionary<string, PerformanceCounter>(),
-        new Dictionary<string, PerformanceCounter>()
+                new Dictionary<string, PerformanceCounter>(),
+                new Dictionary<string, PerformanceCounter>()
             };
             this.timer1.Start();
         }
