@@ -1,0 +1,3 @@
+D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Debug\NetWork.csprojAssemblyReference.cache
+D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Debug\NetWork.UserControl1.resources
+D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Debug\NetWork.csproj.GenerateResource.cache

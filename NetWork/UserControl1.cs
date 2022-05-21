@@ -12,10 +12,12 @@ namespace NetWork
         private readonly Dictionary<string, PerformanceCounter>[] devices;
         private readonly Label[] labels;
         private readonly string[] counterNames;
+        private readonly int width;
 
         public UserControl1()
         {
             this.InitializeComponent();
+            this.width = this.Width;
             this.labels = new Label[2] { this.label1, this.label2 };
             this.counterNames = new string[2]
             {
@@ -32,6 +34,11 @@ namespace NetWork
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            if (this.Left > 0)
+            {
+                this.Left += this.Width - this.width;
+            }
+            this.Width = this.width;
             float[] numArray = new float[this.counterNames.Length];
             foreach (string instanceName in this.pcc.GetInstanceNames())
             {
@@ -41,7 +48,7 @@ namespace NetWork
                         this.devices[index][instanceName] = new PerformanceCounter(this.pcc.CategoryName, this.counterNames[index], instanceName);
                     try
                     {
-                        numArray[index] += this.devices[index][instanceName].NextValue() / 1024f;
+                        numArray[index] += this.devices[index][instanceName].NextValue() / 1024;
                     }
                     catch
                     {
@@ -53,12 +60,12 @@ namespace NetWork
             string[] strArray = new string[2] { "k/s", "k/s" };
             for (int index = 0; index < numArray.Length; ++index)
             {
-                if ((double)numArray[index] >= 999.5)
+                if (numArray[index] >= 999.5)
                 {
-                    numArray[index] /= 1024f;
+                    numArray[index] /= 1024;
                     strArray[index] = "m/s";
                 }
-                this.labels[index].Text = Convert.ToDouble(numArray[index].ToString((double)numArray[index] < 0.1 ? "0.00" : ((double)numArray[index] < 10.0 ? "0.0" : "G3"))).ToString() + strArray[index];
+                this.labels[index].Text = Convert.ToDouble(numArray[index].ToString(numArray[index] < 0.1 ? "0.00" : (numArray[index] < 10 ? "0.0" : "G3"))).ToString() + strArray[index];
             }
         }
     }

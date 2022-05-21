@@ -35,35 +35,43 @@ namespace NetWork
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.label1 = new Label();
-            this.label2 = new Label();
-            this.timer1 = new Timer(this.components);
+            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            this.label1.Location = new Point(0, 23);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new Size(69, 23);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.Text = "0k/s";
-            this.label1.TextAlign = ContentAlignment.MiddleRight;
-            this.label2.Location = new Point(0, 0);
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new Size(69, 23);
-            this.label2.TabIndex = 1;
+            this.label2.Size = new System.Drawing.Size(70, 18);
             this.label2.Text = "0k/s";
-            this.label2.TextAlign = ContentAlignment.MiddleRight;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timer1
+            // 
             this.timer1.Interval = 1000;
-            this.timer1.Tick += new EventHandler(this.Timer1_Tick);
-            this.AutoScaleDimensions = new SizeF(9f, 15f);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = Color.Black;
-            this.Controls.Add((Control)this.label2);
-            this.Controls.Add((Control)this.label1);
-            this.Font = new Font("宋体", 9f, FontStyle.Bold, GraphicsUnit.Point, (byte)134);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // UserControl1
+            // 
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font(this.Font, FontStyle.Bold);
             this.Name = "UserControl1";
-            this.Size = new Size(69, 46);
+            this.Size = new System.Drawing.Size(70, 44);
             this.ResumeLayout(false);
+
         }
 
         #endregion
