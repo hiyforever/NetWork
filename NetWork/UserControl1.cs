@@ -52,7 +52,7 @@ namespace NetWork
                     }
                     catch
                     {
-                        this.devices[index][instanceName].Close();
+                        this.devices[index][instanceName].Dispose();
                         this.devices[index].Remove(instanceName);
                     }
                 }
