@@ -45,6 +45,7 @@ namespace NetWork
             // 
             this.label1.Location = new System.Drawing.Point(0, 23);
             this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "0k/s";
@@ -54,6 +55,7 @@ namespace NetWork
             // 
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "0k/s";
@@ -69,10 +71,11 @@ namespace NetWork
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font(this.Font, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(70, 40);
             this.ResumeLayout(false);
+
         }
 
         #endregion
