@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace NetWork
@@ -39,6 +40,15 @@ namespace NetWork
                 this.Left += this.Width - this.width;
             }
             this.Width = this.width;
+            int taskBarHeight = Screen.PrimaryScreen.Bounds.Height - Screen.PrimaryScreen.WorkingArea.Height;
+            if (taskBarHeight > 0)
+            {
+                double scale = taskBarHeight / 50.0;
+                this.Height = (int)Math.Round(40 * scale);
+                this.label1.Height = this.label2.Height = (int)(17 * scale);
+                this.Top = (taskBarHeight - this.Height) / 2;
+                this.label1.Top = this.Height - this.label1.Height;
+            }
             float[] numArray = new float[this.counterNames.Length];
             foreach (string instanceName in this.pcc.GetInstanceNames())
             {

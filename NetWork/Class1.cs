@@ -16,10 +16,7 @@ namespace NetWork
 
         protected override BandOptions GetBandOptions()
         {
-            return new BandOptions
-            {
-                HasVariableHeight = true
-            };
+            return new BandOptions();
         }
     }
 }

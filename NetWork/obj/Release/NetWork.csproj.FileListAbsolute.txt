@@ -7,4 +7,3 @@ D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Release\NetWork.csproj.GenerateResourc
 D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Release\NetWork.csproj.CopyComplete
 D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Release\NetWork.dll
 D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Release\NetWork.pdb
-D:\hiyfo\Documents\c#\NetWork\NetWork\obj\Release\NetWork.csprojAssemblyReference.cache
