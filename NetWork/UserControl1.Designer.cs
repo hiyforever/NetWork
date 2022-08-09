@@ -71,7 +71,7 @@ namespace NetWork
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("宋体", 9.6F, System.Drawing.FontStyle.Bold);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(70, 40);
             this.ResumeLayout(false);
